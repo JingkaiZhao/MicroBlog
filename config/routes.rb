@@ -1,4 +1,18 @@
 MicroBlog::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/help"
+
+  get "static_pagess/home"
+
+  get "static_pagess/help"
+
+  resources :static_pages
+
+
+  resources :staic_pages
+
+
   resources :microposts
 
 
