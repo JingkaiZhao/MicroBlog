@@ -1,11 +1,13 @@
 MicroBlog::Application.routes.draw do
-  get "static_pages/home"
+  root to: 'static_pages#home'
 
-  get "static_pages/help"
+  match '/', to: 'static_pages#home'
 
-  get "static_pagess/home"
+  match '/help', to: 'static_pages#help'
 
-  get "static_pagess/help"
+  match '/contact', to: 'static_pages#contact'
+
+  match '/about', to: 'static_pages#about'
 
   resources :static_pages
 
