@@ -3,6 +3,8 @@ MicroBlog::Application.routes.draw do
 
   resources :microposts, only: [:create, :destroy]
 
+  resources :relationships, only: [:create, :destroy]
+
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
@@ -26,6 +28,10 @@ MicroBlog::Application.routes.draw do
   resources :microposts
 
 
-  resources :users
+  resources :users do
+	member do
+	  get :following, :followers
+	end
+  end
 
 end
