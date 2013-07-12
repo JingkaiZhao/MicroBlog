@@ -1,1 +1,4 @@
 参照Ruby on Rails Tutorial做的一个简单微博网站。
+
+
+install git on ubuntu
